@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="152" viewBox="0 0 152 152" fill="none">
+  <!-- Second SVG image -->
+  <g filter="url(#filter0_d_604_2099)">
+    <circle cx="76" cy="76" r="23" fill="url(#paint0_linear_604_2099)"/>
+  </g>
+
+  <!-- First SVG image, centered within the second image -->
+  <g transform="translate(67, 67)">
+    <path d="M10.05 9L14.775 4.275C15.075 3.975 15.075 3.525 14.775 3.225C14.475 2.925 14.025 2.925 13.725 3.225L9 7.95L4.275 3.225C3.975 2.925 3.525 2.925 3.225 3.225C2.925 3.525 2.925 3.975 3.225 4.275L7.95 9L3.225 13.725C3.075 13.875 3 14.025 3 14.25C3 14.7 3.3 15 3.75 15C3.975 15 4.125 14.925 4.275 14.775L9 10.05L13.725 14.775C13.875 14.925 14.025 15 14.25 15C14.475 15 14.625 14.925 14.775 14.775C15.075 14.475 15.075 14.025 14.775 13.725L10.05 9Z" fill="white" stroke="white" stroke-width="0.5"/>
+  </g>
+
+  <defs>
+    <filter id="filter0_d_604_2099" x="0" y="0" width="152" height="152" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feMorphology radius="4" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_604_2099"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.737255 0 0 0 0 0.784314 0 0 0 0 0.890196 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_604_2099"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_604_2099" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_604_2099" x1="53" y1="53.0143" x2="99.0857" y2="99.1143" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30399F"/>
+      <stop offset="1" stop-color="#7654C9"/>
+    </linearGradient>
+  </defs>
+</svg>

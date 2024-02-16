@@ -1,0 +1,335 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+/* ----------------------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* -------------------------------------------REACT CHATBOT CLASSNAME---------------------------------------------------- */
+.react-chatbot-kit-chat-bot-message-container {
+  display: flex;
+  margin: 0.125rem 0;
+  justify-content: flex-start;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+.react-chatbot-kit-chat-container {
+  width: 25rem;
+  position: absolute;
+  bottom: 6.063rem;
+  right: 10rem;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  border-radius: 0.75rem 0.75rem 0.75rem 0rem;
+  background: #f4f4fe;
+  margin: 0.625rem;
+  margin-bottom: 1.25rem;
+  width: auto;
+  color: #282a2e;
+}
+
+.react-chatbot-kit-user-chat-message {
+  margin: 12px;
+  background-color: #7067e5;
+  color: white;
+  border-radius: 0px, 12px, 12px, 12px;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  visibility: hidden;
+}
+
+.react-chatbot-kit-user-chat-message-arrow {
+  visibility: hidden;
+}
+.react-chatbot-kit-chat-bot-avatar-letter {
+  color: #061161;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #061161;
+}
+
+.react-chatbot-kit-chat-header {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 12.5px;
+
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(
+    270deg,
+    #436fe2 0.09%,
+    #aa5be8 101.17%,
+    rgba(255, 255, 255, 0) 101.17%
+  );
+}
+.react-chatbot-kit-chat-btn-send {
+  display: none;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  height: 500px;
+  background-color: #fff;
+  border-radius: 21px;
+}
+
+.react-chatbot-kit-chat-input {
+  width: 100%;
+  padding: 10.5px;
+  border: none;
+  font-size: 0.85rem;
+  border-radius: 52px;
+  margin-bottom: 13px;
+  margin-left: 30px;
+  margin-right: 34px;
+  border: 2px solid #b8bcf6;
+}
+
+.react-chatbot-kit-user-chat-message {
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: medium;
+  position: relative;
+  text-align: left;
+  border-radius: 12px 12px 0px 12px;
+}
+
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar {
+  width: 0.1px;
+  border-radius: 100px;
+}
+
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.react-chatbot-kit-chat-header h2 {
+  padding: 10px;
+  color: #f4f4fe;
+  font-size: large;
+}
+/* ------------APP &   avatar-image   & close-image   & OO  & O  & U  & UU  & start-btn   & start-btn:hover  ---------- */
+
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #780206;
+  background: -webkit-linear-gradient(to right, #909bec, #af797b);
+  background: linear-gradient(to right, #9ba6f7, #b38486);
+  padding: 20px;
+}
+
+.avatar-image {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 60px;
+  right: 50px;
+  flex-shrink: 0;
+  float: right;
+  margin: 10px;
+}
+
+
+.close-image {
+  width: 155px;
+  flex-shrink: 0;
+  height: auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 52px;
+  right: 42px;
+}
+
+.OO {
+  max-width: 45px;
+  max-height: 45px;
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+}
+.O {
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+.U {
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  color: white;
+  border-radius: 100%;
+}
+.UU {
+  max-width: 35px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+}
+
+/* ------------------------------------------------PD SERVICES----------------------------------------------------------- */
+.start-btn {
+  font-size: small;
+  background-color: #f4f4fe;
+  color: #282a2e;
+  padding: 9px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 4rem;
+  margin: 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+  background-color: rgba(204, 204, 204, 0.5);
+}
+
+.service-options {
+  font-size: small;
+  background: #f4f4fe;
+  color: #282a2e;
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 101px;
+}
+.query-options {
+  font-size: small;
+  background: #f4f4fe;
+  color: #282a2e;
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 101px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.intermediate {
+  margin: 10px;
+}
+/*------------------------------------------------PD PARTNER------------------------------------------------------------ */
+
+.partner-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.partner {
+  text-align: center;
+  margin: 10px;
+}
+
+.partner img {
+  max-width: 60px;
+  max-height: 80px;
+}
+
+.partner p {
+  margin-top: 20px;
+  font-weight: bold;
+}
+/*------------------------------------------------PD CONTACT------------------------------------------------------------ */
+
+.contact-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 22px;
+  box-shadow: 0 0 5px #ccc;
+  background-color: #fff;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+/*------------------------------------------------PD RESPONSE------------------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .react-chatbot-kit-chat-container {
+    width: 100%;
+  }
+
+  .avatar-image {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.options {
+  margin: 8px;
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 20px;
+  }
+
+  .start-btn {
+    margin-left: 2rem;
+  }
+
+  .greeting-header {
+    margin-bottom: 2rem;
+  }
+}
+/*------------------------------------------------END------------------------------------------------------------ */
+.svg-image {
+  width: 200px;
+  height: 200px;
+}
