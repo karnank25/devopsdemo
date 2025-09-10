@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // Use Jenkins credentials, do NOT hardcode password/token
                 withCredentials([usernamePassword(
-                    credentialsId: 'docker-hub-creds', 
+                    credentialsId: 'a8a7fc94-7f1a-46e3-9d88-6cc384bfd017', 
                     usernameVariable: 'DOCKER_USER', 
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
