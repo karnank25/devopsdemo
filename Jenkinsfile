@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Path to your kubeconfig on Jenkins server
-        KUBECONFIG = '/var/lib/jenkins/.kube/config''
+        KUBECONFIG = '/var/lib/jenkins/.kube/config'  // <- fixed
     }
     stages {
         stage('Checkout') {
