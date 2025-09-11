@@ -16,7 +16,7 @@ spec:
         role: build
       containers:
       - name: app-container
-        image: your-dockerhub-username/your-app:latest
+        image: karnank25/my-app:latest
         ports:
         - containerPort: 3000
 
