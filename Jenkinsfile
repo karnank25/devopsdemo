@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         // Path to your kubeconfig on Jenkins server
-        KUBECONFIG = '/var/lib/jenkins/kubeconfig'
+        KUBECONFIG = '/var/lib/jenkins/.kube/config''
     }
     stages {
         stage('Checkout') {
@@ -23,7 +23,7 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'a8a7fc94-7f1a-46e3-9d88-6cc384bfd017',
+                    credentialsId: 'docker-hub',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
