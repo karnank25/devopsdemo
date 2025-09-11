@@ -9,7 +9,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/karnank25/devopsdemo.git',
-                    credentialsId: 'github-creds'  // replace with your GitHub credentials ID
+    
             }
         }
         stage('Build Docker Image') {
