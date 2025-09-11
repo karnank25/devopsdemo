@@ -7,22 +7,25 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', 
-                    url: 'https://github.com/karnank25/devopsdemo.git', 
+                git branch: 'main',
+                    url: 'https://github.com/karnank25/devopsdemo.git',
                     credentialsId: 'github-creds'  // replace with your GitHub credentials ID
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my-app:latest .'
+                script {
+                    // Use Docker Hub username for tagging
+                    def imageName = "${DOCKER_USER}/my-app:latest"
+                    sh "docker build -t ${imageName} ."
+                }
             }
         }
         stage('Push to Docker Hub') {
             steps {
-                // Use Jenkins credentials, do NOT hardcode password/token
                 withCredentials([usernamePassword(
-                    credentialsId: 'a8a7fc94-7f1a-46e3-9d88-6cc384bfd017', 
-                    usernameVariable: 'DOCKER_USER', 
+                    credentialsId: 'a8a7fc94-7f1a-46e3-9d88-6cc384bfd017',
+                    usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
                     sh 'docker login -u $DOCKER_USER -p $DOCKER_PASS'
@@ -33,9 +36,9 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
+                // Use KUBECONFIG for authentication
                 sh 'kubectl apply -f deployment.yaml --insecure-skip-tls-verify=true'
             }
         }
     }
 }
-
