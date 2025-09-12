@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-app-service
+spec:
+  selector:
+    app: react-app # This matches the 'app' label in your Deployment's Pods
+  ports:
+    - protocol: TCP
+      port: 3000 # The port the service exposes
+      targetPort: 3000 # The port your React app runs on inside the container
+  type: NodePort
