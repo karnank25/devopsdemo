@@ -29,7 +29,9 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
+                // Apply Deployment and Service
                 sh 'kubectl apply -f deployment.yaml --insecure-skip-tls-verify=true'
+                sh 'kubectl apply -f service.yaml --insecure-skip-tls-verify=true'
             }
         }
     }
