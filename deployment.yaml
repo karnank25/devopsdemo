@@ -12,11 +12,10 @@ spec:
       labels:
         app: my-app
     spec:
-      nodeSelector:
-        role: worker
       containers:
       - name: app-container
         image: karnank25/my-app:latest
         ports:
         - containerPort: 3000
+
 
