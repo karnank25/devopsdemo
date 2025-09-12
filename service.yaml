@@ -4,7 +4,7 @@ metadata:
   name: react-app-service
 spec:
   selector:
-    app: react-app # This matches the 'app' label in your Deployment's Pods
+    app: my-react-app # This matches the 'app' label in your Deployment's Pods
   ports:
     - protocol: TCP
       port: 3000 # The port the service exposes
